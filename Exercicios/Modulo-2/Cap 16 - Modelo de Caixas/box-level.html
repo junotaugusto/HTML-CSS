@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+</head>
+<style>
+    h1 {
+        background-color: lightgrey;
+        width: 300px;
+        height: 300px;
+        font-weight: bold;
+        border-width: 10px;
+        border-style: solid;
+        border-color: darkblue;
+        
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+
+        
+        margin-top:20px ;
+        margin-right:20px ;
+        margin-bottom:40px ;
+        margin-left:20px  ;
+        /*
+        margin: auto;
+        */
+
+        outline-width: 5px;
+        outline-style: dashed;
+        outline-color: salmon;
+    }
+
+    a {
+        border-width: 10px;
+        border-style: solid;
+        border-color: red;
+        padding: 10px;
+        height: 100px;
+    }
+</style>
+<body>
+    <h1>Exemplo de caixa box level.</h1>
+    <h2>Analisando o modelo de caixa.</h2>
+    <p>Parágrafos também são exemplos de box level, mas os <a href="#">links</a> são exemplos de caixas inline level. Vamos ver como tudo isso funciona.</p>
+    <p>A centralização de caixas box level não devem ser feitas pela margin-left até chegar ao centro da página. Se isso for feito, e a tela do navegador do usuário for maior ou menor, ele já não centraliza. O meio, em si, é calculado de acordo com o tamanho da caixa. <strong>Para centralizar uma caixa utilize a propriedade margin: auto.</strong>.</p>
+    <p>O outline possui seu tamanho que pode extrapolar a margem mas ele não aumenta o tamanho da margem.</p>
+    <h2>Utilizando Shorthands</h2>
+    <p>Podemos configurar o padding, border, margin, outline etc utilizando apenas uma linha de código, comumente chamada de shorthand. Para inserirmos os valores que cada atributo vai receber, colocamos , no sentido horário, começando do topo e indo à direita, base e esquerda, esses valores</p>
+    <p>Porém, na utilização de shorthands, podemos fazer da seguinte maneira:</p>
+    <p>Digamos que queremos inserir uma margem em determinada caixa. Se quisermos que cada lado tenha 10px de margem, não precisamos inserir este valor em cada lado da margem. Utilizamos o shorthand: <br><br>
+    margin: 10px;</p>
+    <p>Desta forma, todos os lados terão 10px de tamanho. Mas e se quisermos inserir 10px no top e no bottom e 20px no right e left. Faça desta maneira: <br><br>
+    margin: 10px 20px;</p>
+    <p>Então, quando colocamos quatro valores, é a configuração para cima, direita, baixo e esquerda. Quando colocamos dois valores, é a configuração de cima e embaixo iguais e esquerda e direita iguais. Quando colocamos apenas um valor, é o mesmo valor para cada lado.</p>
+    <p>Para centralizar a caixa, mas manter as configurações de margem de baixo e de cima, utilize o atributo auto na esquerda e direita do código conforme descrito abaixo: <br><br>
+        margin: 10px auto 10px auto;
+    </p>
+    <h2>Display: Block ou Inline</h2>
+    <p>Podemos alterar a propriedade de uma caixa de block para inline ou vice versa. Se inserirmos o atributo display:block para uma caixa inline, ela irá se comportar como um bloco, quebrando a linha, podendo configurar o box sizing, inserindo largura, altura etc.</p>
+    <p>A mesma coisa acontece se colocarmos o atributo display:inline para uma caixa em bloco. Ela irá se comportar como uma caixa inline, perderá os atributos de altura e largura, quebra de linha etc, porém ficará na mesma linha.</p>
+</body>
+</html>

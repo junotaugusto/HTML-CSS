@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Fontes Externas</title>
+   
+   <style>
+        @font-face {
+        font-family: 'VCR-OSD-Mono';
+        src:url('recado/VCR-OSD-Mono.ttf.woff') format('woff'),
+            url('recado/VCR-OSD-Mono.ttf.svg') format('svg'),
+            url('recado/VCR-OSD-Mono.ttf.eot'),
+            url('recado/VCR-OSD-Mono.ttf.eot?#iefix')format('embedded-opentype'); 
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        @font-face {
+            font-family: "reglisse" ;
+            src: url("reglisse/Reglisse_Back.otf") format("opentype"), url("reglisse/Reglisse_Fill.otf") format("opentype");
+            font-weight: lighter;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+        
+        /*
+        Tipos de format()
+        - opentype (otf)
+        - truetype (ttf)
+        - embedded-opentype
+        - truetype-aat (Apple Advanced Typography)
+        - svg
+        */
+         /*Shorthand - Simplificar o código. A ordem é 
+        font-style, font-weight - font-size, font-family.*/
+        body {
+
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1 {
+            font-family: 'reglisse';
+            font-size: 3em;
+            color: blue;
+            text-align: center;
+        }
+        
+        p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 32px;
+            text-align: justify;
+            text-indent: 25px;
+        }
+
+        a {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 32px;
+            color: #2046F5;
+        }
+
+        ol {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 32px;
+        }
+
+        .recado {
+            font-family: 'VCR-OSD-Mono';
+        }
+        .recado2 {
+            font-family: 'VCR-OSD-Mono';
+            font-size: 200px;
+            color: white;
+            background-color: #2046F5;
+            width: 59.5%;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-align: center;
+            padding-left: 18px;
+            padding-bottom: 15px;
+            text-shadow: 2px 2px 1px #1a38bf;
+        }
+
+        hr {
+
+            height: 10px;
+            border: 1px solid #2046F5;
+            background-color: #1a38bf;
+        }
+       
+    </style>
+
+</head>
+    <body>
+        <h1>
+            Extraindo Fontes de Sites
+        </h1>
+            <p>
+                Foram utilizadas fontes que podem ser baixadas no site <a href="https://www.dafont.com/pt/" target="_blank">dafont.com</a>. Também podem ser baixadas fontes pelo site oficial do google, em <a href="https://fonts.google.com/" target="_blank">fonts.google.com</a> que, inclusive, é o mais recomendável. Verifique sua aplicabilidade no código fonte desta página.
+            </p>
+        <hr><hr>
+        <h1>
+            Aplicando Fontes Usando a Extensão Fonts Ninja
+        </h1>
+            <p>
+                Esta fonte, intitulada "Open Sans", encontra-se no seletor de parágrafos do estilo interno desta página. A fonte foi extraída do site <a href="https://ge.globo.com/" target="_blank" title="Globo Esporte">Globo Esporte</a> por meio de uma extensão chamada Fonts Ninja. Verifique a extensão nas configurações do browser.
+            </p>
+        <hr><hr>
+        <h1>Extraindo Fontes de Imagens</h1>
+            <p>
+                Abra o Google Chrome e acesse três sites: <br>
+                <ol>
+                    <li>-> <a href="https://www.whatfontis.com/" target="_blank">whatfontis.com</a></li>
+                    <li>-> <a href="https://www.fontsquirrel.com/" target="_blank">fontsquirrel.com</a></li>
+                    <li>-> <a href="https://www.myfonts.com/" target="_blank">myfonts.com</a></li>
+                </ol>
+            </p>
+            <p>
+                Nos três sites, arraste a imagem para o local solicitado e o software irá identificar as fontes da imagem. Pode ser quem um dos sites identifique as fontes e outro não, por isso, três sites diferentes.
+            </p>
+            <p class="recado">
+                Testando a fonte retirada da imagem dos videos do Curso em Video de HTML5 e CSS3. Segue abaixo a imagem.
+            </p>
+            <img src="Captura de Tela 2022-09-13 às 09.13.32.png" alt="">
+            <p>E abaixo, a fonte aplicada à uma classe, somente usando CSS3, sem imagem:</p>
+            <p class="recado2">Recado!</p>
+            <p> </p> <!--Parágrafo oculto para espaçamento. Objetivo estético.-->
+            <hr><hr>
+        <h1>Alinhamento de Texto</h1>
+
+        <h1 style="font: bold normal 36px Arial; color: black; text-align: right;">Título</h1>
+        <h2 style="font: italic normal 26px Arial; text-align: center;">Subtítulo</h2>
+        <p style="font: normal 18px Arial; text-align: justify; text-indent: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eaque dolores vitae soluta mollitia adipisci dicta, eum distinctio temporibus quasi, nobis omnis corporis totam repellat rerum inventore magni similique. Suscipit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis soluta adipisci iusto laudantium ducimus voluptate ratione id cumque! Dolorem dolores sed aspernatur laudantium aliquam numquam fuga asperiores velit, adipisci beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio doloremque atque, labore iste iusto pariatur, aliquam sapiente ducimus odit tenetur hic. Alias, natus ad. Dignissimos asperiores corrupti quasi voluptatem assumenda.</p>
+
+        <p>Percebe-se que os estilos foram aplicados diretamente na linha dos textos acima para não criar outro arquivo com estilos CSS diferentes. Nota-se também a aplicabilidade do estilo "text-indent" que faz com que o parágrafo tenha uma identação de x pixels determinado pelo desenvolvedor, ou seja, a primeira palavra de cada parágrafo contém um espaço para inciar o texto.</p>
+    </body>
+</html>

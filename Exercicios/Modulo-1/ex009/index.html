@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white; 
+        }
+        p {
+            padding-left: 15px;
+            text-align: justify;
+        }
+    </style>
+    <title>Listas</title>
+</head>
+<body>
+    <h1>Trabalhando com Listas</h1>
+    <h2>Listas Ordenadas</h2>
+        <p>Listas ordenadas são aquelas que a ordem faz a diferença.</p>
+        <ol>
+            <li>Acordar</li>
+            <li>Ligar para João</li>
+            <li>Tomar Café</li>
+            <li>Escovar os Dentes</li>
+            <li>Trabalhar</li>
+        </ol>
+        <p>No HTML5 o &lt;/li&gt; é <strong>OPCIONAL</strong>. Portanto, o elemento de uma lista em HTML pode ficar da seguinte maneira:</p>
+        <pre>
+        &lt;ol&gt;<br>
+            &lt;li&gt;Acordar <br>
+            &lt;li&gt;Ligar para João <br>
+            &lt;li&gt;Tomar Café <br>
+            &lt;li&gt;Escovar os dentes <br>
+            &lt;li&gt;Trabalhar <br>
+        &lt;/ol&gt;
+        </pre>
+        <p>Existem algumas formas interessantes de alterar uma lista ordenada. Por exemplo, inserindo o parâmetro "type" dentro da tag &lt;ol&gt;. Confira abaixo:</p>
+
+        <h3>Enumerada, a partir de 30:</h3>
+        <ol type="1" start="30"> <!--Começa contando a partir do 30-->
+            <li>Acordar</li>
+            <li>Ligar para João</li>
+            <li>Tomar Café</li>
+            <li>Escovar os Dentes</li>
+            <li>Trabalhar</li>
+        </ol>
+        <h3>Por letras maiúsculas:</h3>
+        <ol type="A" start="X">
+            <li>Acordar</li>
+            <li>Ligar para João</li>
+            <li>Tomar Café</li>
+            <li>Escovar os Dentes</li>
+            <li>Trabalhar</li>
+        </ol>
+        <h3>Por número romanos maiúsculos:</h3>
+        <ol type="I">
+            <li>Acordar</li>
+            <li>Ligar para João</li>
+            <li>Tomar Café</li>
+            <li>Escovar os Dentes</li>
+            <li>Trabalhar</li>
+        </ol>
+        <h3>Por letras minúsculas:</h3>
+        <ol type="a">
+            <li>Acordar</li>
+            <li>Ligar para João</li>
+            <li>Tomar Café</li>
+            <li>Escovar os Dentes</li>
+            <li>Trabalhar</li>
+        </ol>
+        <h3>Por números romanos minúsculos:</h3>
+        <ol type="i">
+            <li>Acordar</li>
+            <li>Ligar para João</li>
+            <li>Tomar Café</li>
+            <li>Escovar os Dentes</li>
+            <li>Trabalhar</li>
+        </ol>
+    <h2>Listas Não Ordenadas</h2>
+    <p>Listas sem ordem prévia. Utilizamos a tag &lt;ul&gt;.</p>
+    <ul>
+        <li>Acordar</li>
+        <li>Ligar para João</li>
+        <li>Tomar Café</li>
+        <li>Escovar os Dentes</li>
+        <li>Trabalhar</li>
+    </ul>
+
+    <p>Também podemos utilizar o parâmetro "type" para destacar o tipo do ponto da lista. Por padrão, ele fica com círculos, conforme visto acima. Você pode definí-los como "circle" e "square". Confira:</p>
+    <ul type="circle">
+        <li>Acordar</li>
+        <li>Ligar para João</li>
+        <li>Tomar Café</li>
+        <li>Escovar os Dentes</li>
+        <li>Trabalhar</li>
+    </ul>
+
+    <ul type="square">
+        <li>Acordar</li>
+        <li>Ligar para João</li>
+        <li>Tomar Café</li>
+        <li>Escovar os Dentes</li>
+        <li>Trabalhar</li>
+    </ul>
+
+    <h2>Minhas Linguages Favoritas</h2>
+    <ol type="A">
+        <li>Antigas</li>
+        <ol>
+            <li>Clipper</li>
+            <li>Visual Basic</li>
+            <li>Fortran</li>
+            <li>Delphi</li>
+        </ol>
+        <li>Novas</li>
+        <ol>
+            <li>PHP</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Kotlin</li>
+        </ol>
+    </ol>
+
+    <h2>Meus Jogos Favoritos</h2>
+    <ol type="A">
+        <li>Mega Drive</li>
+            <ul type="square">
+                <li>Sonic</li>
+                <li>Fifa Soccer</li>
+                <li>Road Rash</li>
+            </ul><br>
+        <li>Nintendo 64</li>
+            <ul type="square">
+                <li>Zelda: Ocarina of Time</li>
+                <li>GoldenEye</li>
+                <li>Star Fox</li>
+            </ul><br>
+        <li>PlayStation II</li>
+            <ul type="square">
+                <li>GTA San Andreas</li>
+                <li>Shadow of the Colossus</li>
+                <li>Metal Gear</li>
+            </ul><br>
+    </ol>
+    <h2>Lista de Definições</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação para a criação de conteúdo web.</dd> <br>
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para a criação do design de um site.</dd> <br>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação para a criação de interatividade de um site.</dd> <br>
+
+    </dl>
+</body>
+</html>

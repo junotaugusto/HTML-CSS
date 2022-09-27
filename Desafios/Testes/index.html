@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white; 
+        }
+        p {
+            padding-left: 15px;
+            text-align: justify;
+        }
+        img {
+            padding-left: 10px;
+        }
+    </style>
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Morro do Careca</h1>
+    <p>Abaixo, a foto minha com minha Tita, que eu amo muito!</p>
+    <picture>
+        <source media="(max-width: 750px )" srcset="camboriu-p.JPG" type="image/JPG">
+        <source media="(max-width: 1050px )" srcset="camboriu-m.JPG" type="image/JPG">
+        <img src="camboriu-g.JPG" alt="Foto Camboriu Grande">
+    </picture>
+    <hr><hr>
+    <h1>Reproduzindo Audios</h1>
+    <p>A maneira mais simples de se reproduzir um audio é por meio da tag &lt;audio&gt;.</p>
+    <audio src=""></audio>
+    
+</body>
+</html>

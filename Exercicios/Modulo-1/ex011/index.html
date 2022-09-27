@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white; 
+        }
+        p {
+            padding-left: 15px;
+            text-align: justify;
+        }
+        img {
+            padding-left: 10px;
+        }
+
+        iframe {
+
+            border: 6px ridge rgb(131, 131, 200);
+            outline: 8px ridge rgb(225, 225, 162);
+        }
+
+    </style>
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem Dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente ou diminua o tamanho do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 750px )" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png"> <!--Ele vai carregar a foto G. Mas, se o dispositivo dele chegar a menos de 1000px, ele vai carregar a foto M.-->
+        <img src="imagens/foto-g.png" alt="Foto Grande">
+    </picture>
+    <p>O mecanismo de busca do Google buscará mais sites que não tenham a taxa de rejeição grande. Muitas vezes, quando acessamos sites e, por ser um site ruim ou mal distribuido, saímos na mesma hora, o google monitora isso e insere este site em uma taxa de rejeição alta.</p>
+    <p>Por isso, é muito importante que tenhamos cuidado com as imagens que iremos inserir nos sites. O exemplo da imagem acima seria para que alguém pudesse acessar o site em mais de um dispositivo, onde, no caso da imagem ficar muito grande para aquele dispositivo ela diminuísse automaticamente.</p>
+    <p>A tag &lt;picture&gt; proporciona isso. Dentro dela, inserimos a tag &lt;img&gt; com a imagem grande. Porém, inserimos também outra tag. A tag &lt;source media: type&gt;. Nesta tag, colocamos a imagem de tamanho médio para que, caso o dispositivo do usuário abra a imagem grande e esta ocupe boa parte do navegador, automaticamente, esta imagem é substiuída pela imagem média. A largura máxima aplicada à tela é de 1050px, que é quando começa a aparecer a barra de rolagem. Não é uma boa opção deixar esta barra de rolagem para que o usuáro "se vire" com ela. </p>
+    <p>Lembrando que as tags &lt;source media: type&gt; tem que ser ACIMA da tag &lt;img&gt;. Você tem uma imagem padrão e, acima dela, vai inserindo as imagens de tamanho menor. </p>
+    <hr><hr>
+    <h1>Reproduzindo Audios</h1>
+    <p>A maneira mais simples de se reproduzir um audio é por meio da tag &lt;audio src="musica.mp3" controls&gt;. Lembrando que, para que o play apareça, é preciso inserir o parâmetro "controls". Existem navegadores que tocam a música automaticamente quando utilizamos o parâmetro "autoplay". Caso isso não aconteça, utilize as sources dentro da tag audio conforme código.</p>
+    <!--
+    - Forma mais fácil de inserir um audio:
+    <audio src="midia/sevenlives.mp3" controls></audio>
+    -->
+
+    <!-- Parâmetros: 
+        Preload: Auto - Por padrão é auto. Se escolher esta opção, o site irá esperar o carregamento de todos arquivos de audio até abrir, o que pode ser um problema no caso de arquivos muito grandes de audio.
+        Metadata - Ele irá carregar apenas algumas informações do arquivo.
+        None - Ele somente irá carregar o arquivo se o usuário clicar nele.
+
+        Loop: Carrega o arquivo de audio e o toca em loop.
+        
+        Arquivos wav são muito grandes e pesados. 
+    -->
+    <audio preload="auto" controls>
+        <!--Primeiro ele vai tentar carregar o primeiro arquivo, o de cima.-->
+        <source src="midia/sevenlives.mp3" type="audio/mpeg">
+        <source src="midia/intro.wav" type="audio/wav">
+        <source src="midia/invalid_keypress.ogg" type="audio/ogg">
+        <p>Infelizmente seu navegador não consegue reproduzir audio. Segue link para download <a href="midia/sevenlives.mp3">Seven Lines</a></p>
+    </audio>
+    <hr><hr>
+    <h1>Inserindo Vídeos Hospedados Localmente</h1>
+    <p>Este video está hospedado no meu próprio servidor.</p>
+    <!--Forma mais simples abaixo: 
+    <video src="midia/working-2.webm" height="300px" controls></video>
+    -->
+    <!--Adicione mais de uma opção para abrir em seu site. Pode ser que o navegador do usuário não abra determinado formato de video-->
+    <video height="500px" width="500" preload="metadata" controls poster="imagens/foto-m.png" loop autoplay>
+        <source src="midia/working-2.mp4" type="video/mp4">
+        <source src="midia/working-2.webm" type="video/webm">   
+    </video>
+    <p>Quando os videos são hospedados utilizando a tag &lt;video&gt;, da forma utilizada no código, é preciso entender que ele irá consumir muito tráfego de dados. Um exemplo seria em um site com 1000 acessos diários consumindo um vídeo de 11 megas. Ele irá consumir, no final do dia, 11 gigas de banda.</p>
+    <p>Por isso, o ideal é adicionar videos de serviços de hospedagem de video. Um deles é o youtube. Vá para o site do youtube, escolha um video, clique em "compartilhar" e depois em "incorporar". Depois, basta clicar em "copiar" e colar o código HTML, conforme fiz para abrir o video abaixo. </p>
+    <iframe width="500" height="500" src="https://www.youtube.com/embed/rDBbaGCCIhk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>Nestes casos, quando o usuário clica em um video hospedado pelo youtube, ele não consome dados do servidor do site, mas sim, do servidor do, no caso, youtube. </p>
+    <p>Portanto, uma boa ideia seria criar um canal no youtube e, ao criar conteúdo próprio, hospedar estes videos no youtube e, ao invés de hospedá-los localmente, utilize a hospedagem do youtube, inserindo os videos que estão no próprio canal do youtube.</p>
+    <p>O professor Gustavo Guanabara, no site <a href="https://www.estudonauta.com/matricula/?gclid=Cj0KCQjwjbyYBhCdARIsAArC6LJDlbiVH0bGBt1qXLx4atlHvnqFFjhMlcQfGzq_grWecA9NKJQ0jmkaAk63EALw_wcB" target="_blank">Estudonauta</a> utiliza o serviço do <a href="https://vimeo.com/pt-br/upgrade?vcid=33579&utm_medium=cpc&utm_source=google&gclid=Cj0KCQjwjbyYBhCdARIsAArC6LJokL7uDNeEnDtHmwk4pp_EyrpWMgbYVHidDFlkfBvu0BbC0ZGwyGcaAqDaEALw_wcB&gclsrc=aw.ds" target="_blank">Vimeo</a> para hospedar seus sites. Desta forma, ele tem a opção de não deixar seus videos que são exclusivos para o público pagante do estudonauta, livres para todo mundo assistir.  </p>
+
+    <p>Outra plataforma de hospedagem de videos é o Vimeo. O processo de hospedagem de videos do Vimeo em seu site é similar ao do youtube, porém ele possui algumas configurações a mais que podem ser feitas, diretamente na aba de compartilhamento do video. Confira um video do Vimeo abaixo.</p>
+
+    <iframe src="https://player.vimeo.com/video/709514622?h=d3f1da99a9&autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0&badge=0" width="500" height="500" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+    <p><a href="https://vimeo.com/709514622">The Circle (Shortfilm)</a> from <a href="https://vimeo.com/user37313853">Six N. Five</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+    <p>The circle evokes time, or more precisely, the fragments of time that pile up in a vast scenario of unique moments and memories. It is an introspective journey of wonder and imagination through these glimpses of time. This simple form has been a character present in my work for years, it represents care, calm, and attention to achieve its ultimate perfection. We are a circle, without boundaries, beginning or end. Infinity, Unity, connection, just a circle in expansion.<br />
+    <br />
+    This piece is part of Moco Museum collection. To be exhibited in Amsterdam and Barcelona.</p>
+</body>
+</html>

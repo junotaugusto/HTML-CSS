@@ -1,0 +1,76 @@
+@charset "UTF-8"; /*Configurações de acentos no site*/
+
+
+body {
+
+    text-align: justify;
+    color: white;
+    background-color: #2E46F5;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-attachment: fixed; /*FIXA O BACKGROUND*/
+    
+}
+
+h1 {
+
+    text-align: center;
+}
+
+a {
+    color: #61E5FA;
+    font-style: italic;
+}
+
+.link-pdf {
+    color: white;
+    font-style: italic;
+    text-align: center;
+    font-size: 30px;
+}
+
+img {
+
+    display: block;
+    margin: auto;
+    border: 4px solid #66ECEC;
+}
+
+hr {
+
+    height: 5px;
+    background-color: #66ECEC;
+}
+
+.div-azul {
+    background-image: linear-gradient(to right, #32CBD1, #2EBED9, #339CC2, #2E98D9, #2B7ECF);
+    border: 4px solid rgb(73, 73, 73);
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 100px;
+    color: white;
+    text-align: center;
+}
+
+.div-verde {
+    background-image: linear-gradient(45deg, #41ED0C, #96F70C, #D1E000, #F7E40C, #EDC40C);
+    border: 4px solid rgb(73, 73, 73);
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 100px;
+    color: white;
+    text-align: center;
+}
+
+.div-vermelha {
+    background-image: linear-gradient(to right, #CF8F06, #D97B07, #C2530F, #D93307, #D10F06);
+    border: 4px solid rgb(73, 73, 73);
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 100px;
+    color: white;
+    text-align: center;
+}

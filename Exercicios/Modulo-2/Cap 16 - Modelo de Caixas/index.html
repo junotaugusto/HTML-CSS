@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            background-image: linear-gradient(to right, #0D2866, #1641A6, #1B50CC, #1D59E6, #1F5FF2);
+            color: rgb(255, 255, 255);
+            padding: 25px;
+        }
+        a {
+            color:rgb(255, 255, 255);
+        }
+
+        a:hover {
+            background-color: black;
+            color: white;
+            border-radius: 15px;
+        }
+
+        h1 {
+            -webkit-text-stroke: 0.35px #3a3a3a;
+            text-shadow: 0.5px 0 0 #1e1e1e;
+            text-align: center;
+        }
+
+        h1:hover {
+            -webkit-text-stroke: 0.35px #3a3a3a;
+            text-shadow: 0.5px 0 0 #1e1e1e;
+            color: #0D2866;
+            background-color: white;
+            width: 450px;
+            text-align: center;
+            border-radius: 20px;
+            display: block;
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        h2 {
+            -webkit-text-stroke: 0.35px #3a3a3a;
+            text-shadow: 0.5px 0 0 #1e1e1e;
+            text-align: center;
+        }
+
+        h2:hover {
+            -webkit-text-stroke: 0.35px #3a3a3a;
+            text-shadow: 0.5px 0 0 #1e1e1e;
+            color: #0D2866;
+            background-color: white;
+            width: 450px;
+            text-align: center;
+            border-radius: 20px;
+            display: block;
+            margin: auto;
+            margin-bottom: 25px;
+        }
+
+        p {
+            text-align: justify;
+            border: 4px solid rgb(255, 255, 255);
+            border-radius: 20px;
+            width: 80%;
+            display: block;
+            margin: auto;
+            padding: 15px;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <h1>
+        Modelo de Caixas
+    </h1>
+        <h2>
+            O Que é o Modelo de Caixas?
+        </h2>
+            <p>
+                O modelo de caixa pode ser aplicável ao HTML e ao CSS. É um conjunto que ajuda muito na organização do site. A teoria é a de que o desenvolvedor possui uma caixa na mão.<strong> <em>Em um documento HTML, tudo aquilo que é exibido na tela é exibido na forma de caixa. Praticamente, é o que vemos neste site, nestes parágrafos.</em></strong>
+            </p>
+            <p>
+                A grande maioria das caixas em HTML podem estar uma dentro da outra. Isso facilita muito a disposição do site. Quando inserimos um elemento dentro do outro, tanto em linguagens de programação, como em HTML, nós chamamos de <strong>aninhamento</strong>. 
+            </p>
+            <p>
+                Quando criamos uma tag &lt;h1&gt;, por exemplo, tudo o que escrevermos dentro da tag ficará "dentro da caixa de h1". Quando fazemos configurações de largura, altura, cor de fundo, fonte etc do seletor h1, na verdade, <strong>estamos configurando a caixa na qual ele se encontra.</strong>
+            </p>
+            <p>
+                As caixas possuem propriedades como width (largura), height (altura), margin (margem), padding (preenchimento), border (borda), outline (contorno). Estes são os principais elementos da anatomia de uma caixa.
+            </p>
+        <h2>
+            Tipos de Caixa
+        </h2>
+            <p>
+                Existem dois tipos de caixas: <br><br>
+                <strong>1 - Box Level -</strong> Uma caixa do tipo Box Level, se nós a criarmos dentro de um parágrafo, por exemplo, ela irá pular para a linha de baixo e vai dezenhar uma caixa nova, ou seja, ele sempre inicia uma linha nova. Outra propriedade de box level é que ele sempre ocupa a largura total do viewport (area branca do navegador).  <br><br>
+                <strong>2 - Inline Level - </strong> Uma caixa do tipo inline level irá, se sobrar espaço, desenhar a caixa ao lado do conteúdo sem pular uma linha, exatamente do tamanho da caixa de texto e, quando terminar, ele também não irá quebrar a linha, ou seja, ele não irá ocupar 100% do viewport. aa
+            </p>
+        <h2>
+            Exemplos de Box Level
+        </h2>
+            <p style="width:40%; text-align: center; font-size: 45px;">
+                &lt;div&gt;<br> &lt;h1&gt; ao &lt;h6&gt;<br> &lt;p&gt;<br> &lt;main&gt;<br> &lt;header&gt;<br> &lt;nav&gt;<br> &lt;article&gt;<br> &lt;aside&gt;<br> &lt;footer&gt;<br> &lt;form&gt;<br> &lt;video&gt;
+            </p>
+        <h2>
+            Exemplos de Box Inline
+        </h2>
+            <p style="width:40%; text-align: center; font-size: 45px;">
+                &lt;span&gt;<br> &lt;a&gt;<br> &lt;code&gt;<br> &lt;small&gt;<br> &lt;strong&gt;<br> &lt;em&gt;<br> &lt;sup&gt;-&lt;sub&gt;<br> &lt;label&gt;<br> &lt;button&gt;<br> &lt;input&gt;<br> &lt;select&gt;<br>
+            </p>
+
+            <hr><hr>
+            <h1>Aula Prática 1</h1>
+            <h2>Extensão Web Developer</h2>
+            <p>Abrindo o web developer, inspecionando a página, aparece algunas configurações já feitas pelo "user agent". O user agent é o próprio navegador. Todo navegador possui uma configuração básica seguida por todos eles.</p>
+            <p>Por exemplo, o &lt;h1&gt; é um elemento do tipo display:block. Um elemento display:block é um elemento de box level. Na aula, cujo arquivo é <a href="box-level.html">este aqui</a>, veja que a tag &lt;h1&gt; recebeu algumas alterações, utilizando o CSS interno. Desta forma, quando alterados quaisquer elementos antes estabelecidos pelo padrão do navegador, a extensão mostra aquele elemento específico riscado e, em cima, destacado como uma alteração do usuário por meio da tag &lt;style&gt;.</p>
+            <p>Outras propriedades, como alterar na hora a altura ou largura, alterando o peso da fonte, etc, pode ser feito na hora, para melhor visualização do desenvolvedor. Lembrando que as alterações feitas na extensão não alteram o arquivo original.</p>
+
+            <hr><hr>
+            <h1>Aula Prática 2</h1>
+            <h2></h2>
+</body>
+</html>

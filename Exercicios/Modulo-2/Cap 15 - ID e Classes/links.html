@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 25px;
+        }
+
+        a {
+            color: red;
+            text-decoration: none; /*Tirando o sublinhado dos links*/
+            font-weight: bolder;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        a:visited {
+            color: darkred;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        a:hover {
+
+            background-color: rgb(0, 102, 255);
+            color: white;
+            border-radius: 5px;
+            font-weight: bolder;
+            padding: 2px;
+        }
+        /*Pseudo Classes acima, uma vez os dois pontos.
+          Pseudo Elementos, abaixo, duas vezes dois pontos.*/
+        a::after { 
+            content: ' [link]';
+            font-weight: normal;
+            color: red;
+            text-decoration: none;
+        }
+
+        .especial::after {
+            content: ' <==';
+            font-weight: normal;
+            color: darkslategrey;
+            text-decoration: none;
+        }
+
+        .especial::before {
+            content: '==> ';
+            font-weight: normal;
+            color: darkslategrey;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li>
+            <a href="https://gustavoguanabara.github.io" target="_blank" title="Repositório Github">Repositório Github</a>
+        </li>
+
+        <li>
+            <a href="https://youtube.com/cursoemvideo" target="_blank">Canal do Youtube</a>
+        </li>
+
+        <li>
+            <a href="https://www.cursoemvideo.com" target="_blank" class="especial">Site do Curso em Video</a>
+        </li>
+    </ul>
+    <p>Sites não visitados ficam azuis e sites visitados ficam em roxo.</p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Hover</title>
+    <style>
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px;
+        }
+
+        div > p { /*Apenas os parágrafos dentro de divs irão ficar com o texto escondido.*/
+            display: none;
+        }
+
+        div:hover > p { /*Quando passar o mouse no parágrafo filho da div, ele vai mostrar o texto.*/
+            display: block;
+            
+        }
+
+        div:hover {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Hover</h1>
+    <p>No hover, quando passamos o mouse em cima de determinada área do site, ele responde com alguma mudança.</p>
+    <div>
+        Por exemplo, passe o mouse aqui para ver o planeta terra!
+        <p><img src="terra.png" alt="terra" width="300px"></p>
+    </div>
+    <p>Viu??? Este foi um exemplo de hover.</p>
+</body>
+</html>

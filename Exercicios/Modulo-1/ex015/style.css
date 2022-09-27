@@ -1,0 +1,27 @@
+@charset "UTF-8"; /*REGRA DE ACENTUAÇÃO. As regras são no início do arquivo CSS e sempre começam com arroba.*/
+
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    text-align: justify;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    display: block;
+    padding: 15px;
+    margin-left: 25%;
+}
+
+h2 {
+    font-style: italic;
+    color: #ffffff;
+}
+
+p {
+    color: #ffffff ;
+}

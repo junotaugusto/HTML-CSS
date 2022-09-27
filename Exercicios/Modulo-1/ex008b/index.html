@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white; 
+        }
+        p {
+            padding-left: 15px;
+            text-align: justify;
+        }
+    </style>
+    <title>Outras Formatações</title>
+</head>
+<body>
+    <h1>Outras Formatações</h1>
+    <h2>Código-Fonte e Pré-Formatação</h2>
+    <p>
+        Códigos-Fonte são partes de código, comandos como, por exemplo: "O comando document.getElementById('teste') é escrito em linguagem JavaScript.". Este tipo de exibição do código fica confusa, conforme está escrito no exemplo, porque as letras, visualmente, não possuem o mesmo espaçamento, porque a fonta não é monoespaçada, ou seja, ela não reserva o mesmo espaçamento lateral para cada letra. <br><br>
+    
+        Para fazer isso, utilizamos a tag &lt;code&gt;. Confira neste exemplo: "O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript.". <br><br>
+
+        Outro exemplo seria escrever um código em Python. Confira no exemplo abaixo: <br><br>
+        <code>
+            num = int(input('Digite um número: '))
+            if num % 2 == 0:
+                print (f'O número {num} é PAR')
+            else:
+                print (f'O número {num} é ÍMPAR')
+            print ('Fim do Programa.')    
+        </code>
+        <br><br>
+        Podemos perceber, entretanto, que o &lt;code&gt; não escreve o código com a indentação. Por isso, iremos escrever abaixo como ficaria o código utilizando espaços e indentação com o comando '&nbsp' e o comando &lt;br&gt; <br><br>
+        <code>
+            num = int(input('Digite um número: ')) <br>
+            if num % 2 == 0: <br>
+            &nbsp;&nbsp;print (f'O número {num} é PAR') <br>
+            else: <br>
+            &nbsp;&nbsp;print (f'O número {num} é ÍMPAR') <br>
+            print ('Fim do Programa.') <br>    
+        </code> <br>
+
+        É possível também escrever este código Python utilizando a tag &lt;pre&gt;, que é a pré-formatação do texto, como pai de &lt;code&gt;. Confira abaixo.
+<pre>
+<code>
+    num = int(input('Digite um número: '))
+    if num % 2 == 0:
+        print (f'O número {num} é PAR')
+    else:
+        print (f'O número {num} é ÍMPAR')
+    print ('Fim do Programa.')    
+</code>
+</pre>
+    </p>
+    <h2>Citações</h2>
+    <p>Como diria o pai de um amigo: <q>O computador é um burro muito rápido</q>. Utilizou-se a tag &lt;q&gt; para citar a frase. Lembrando que o HTML é uma linguagem semântica. Por isso, utilizar a tag de citação ao invés de utilizar diretamente as aspas faz muito sentido. Sendo assim, a partir de agora, utilize a tag &lt;q&gt; para citar a frase de alguém. </p>
+    <h2>Citações Completas</h2>
+    <p>Segundo Mauricio Samy Silva, em seu livro "Fundamentos de HTML5 e CSS3": </p>
+    <blockquote cite="https://www.google.com.br/books/edition/Fundamentos_de_HTML5_e_CSS3/2iPYCQAAQBAJ?hl=pt-BR&gbpv=1&dq=html&printsec=frontcover">
+        O World Wide Web Consortium, ou W3C, é um consórcio internacional com quase 400 membros, entre eles, empresas, órgãos governamentais, e organizações independentes que tem por objetivo definir padrões destinados à criação de conteúdos para a web. O termo "Padrões Web" é usado em linguagem de desenvolvimento web para definir técnicas e práticas de criação de conteúdos web em acordo com as recomendações (ou especificações) do W3C. 
+    </blockquote>
+    <p>Note que a especificação "cite" não cria um link para acesso, porém, o endereço fica na parte de trás do site, e os mecanismos de buscas, o google, vão saber que esta frase está se referindo ao endereço destacado no "cite".</p>
+    <h2>Abreviações</h2>
+    <p>Este curso é de <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Muito bom.</p>
+    <p>Utilizando a tag &lt;abbr&gt; podemos abreviar as siglas acima. Passando o mouse em cima, podemos ver o que cada sigla significa.</p>
+</body>
+</html>

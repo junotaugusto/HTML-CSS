@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags em HTML 5</title>
+</head>
+<style>
+
+    /*Todas as tags abaixo não necessariamente precisam ser organizadas desta maneira. Pode ser que uma tag <section> esteja dentro de uma tag <article> ou vice versa. A ideia é montar o site da melhor maneira que o desenvolvedor encontrar*/
+
+    /*Sobre as sombras, cuidado para não exagerar.
+    Parâmetros do box-shadow:
+    1 - deslocamento horizontal - negativo para a esquerda, positivo para a direita
+    2 - deslocamento vertical - negativo para cima, positivo para baixo
+    3 - espalhamento - blur
+    4 - cor da sombra
+    
+    Para criar a própria sombra*/
+    body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color: rgba(173, 173, 173, 0.355);
+        margin: 0px;
+        padding: 10px;
+    }
+
+    header {
+        background-color: rgb(200, 200, 200);
+        padding: 10px;
+        margin: 10px;
+    }
+
+    nav {
+        background-color: grey;
+        box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.384);
+        padding: 3px;
+        border: 00.5px solid rgb(119, 119, 119);
+        border-radius: 5px;
+    }
+
+    nav > a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        margin: 10px
+       
+    }
+
+    nav > a:hover {
+        color: white;
+        background-color: black;
+        margin: 10px;
+        padding: 5px;
+        border: 1px solid grey;
+        text-decoration: underline;
+    }
+
+    main {
+
+        background-color: rgb(123, 123, 123);
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px 5px 5px 50px;
+        box-shadow:  4px 4px 9px rgba(0, 0, 0, 0.384);
+    }
+
+    article {
+
+        background-color: rgba(7, 12, 12, 0);
+        padding: 5px;
+    }
+
+    article > aside { /*Todo <aside> que estiver dentro de um <article>*/
+
+        background-color: black;
+        color: white;
+        font-size: normal;
+        font-style: italic;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        padding: 5px;
+        margin: 3px;
+    }
+
+    article > aside:hover { /*Quando passar o mouse em cima do conteúdo do aside dentro do artigo*/
+
+        color: black;
+        background-color: white;
+    }
+
+    footer { /*Mexe no rodapé do site.*/
+
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-size: bold;
+        padding: 4px;
+        margin: 0px;
+    }
+
+    footer > p {
+        margin: 0px;
+    }
+
+    header > h1 {
+        text-align: center;
+    }
+
+    div#bola {
+        width: 100px;
+        height: 100px;
+        margin: 7.984 px;
+        border-radius: 50%;
+        background-color: rgb(0, 0, 0);
+        display: inline-block;
+    }
+</style>
+<body>
+    <h1>Grouping Tags ou Tags de Agrupamento</h1>
+    <p>As tags de agrupamento sempre foram, basicamente, duas. A &lt;div&gt; como box-level e a &lt;span&gt; como box-inline</p>
+    <p>Antigamente, nas outras versões do HTML, era comum utilizar várias divs para separar o site, inserindo em casa uma delas ids com os nomes de "conteúdo", "cabeçalho", "rodapé" etc.</p>
+    <p>Porém, o HTML5 possui semântica, ou seja, existem tags que servem para fazer justamente este trabalho de separação correta do site, a fim de auxiliar o desenvolvedor na leitura do código e os mecanismos de busca.</p>
+    <p>Algumas das tags de agrupamento são:</p>
+    <ul>
+        <li>
+            &lt;header&gt; - Tag de cabeçalho. 
+        </li>
+        <li>
+            &lt;main&gt; - Tag de conteúdo principal. 
+        </li>
+        <li>
+            &lt;footer&gt; - Tag de rodapé. 
+        </li>
+        <li>
+            &lt;nav&gt; - Tag de barra de navegação.
+        </li>
+        <li>
+            &lt;article&gt; - Tag de conteúdo de artigo.
+        </li>
+        <li>
+            &lt;aside&gt; - Tag de créditos ou alguma coisa menor destacando alguém ou alguma coisa. 
+        </li>
+
+    </ul>
+    <p>Vamos ver como fica disponibilizado o site abaixo. A ideia é utilizar as tags semânticas para organizar o site.</p>
+    <hr><hr>
+    <header>
+        <h1>
+            Meu Web Site
+        </h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+
+    </header>
+    <main>
+        <section id="assuntos">
+            <article id="noticias">
+                <h2>Notícias de Hoje</h2>
+                <h3>Título da Notícia</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, asperiores. Iste perspiciatis praesentium impedit nihil consectetur? Repellat magni quas veritatis veniam ullam, provident id non quaerat, aspernatur exercitationem nemo in! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, vero facere! Excepturi laudantium debitis harum accusantium, quidem ducimus vitae autem quaerat maiores nesciunt perspiciatis eaque eligendi ad nostrum atque consequatur!</p>
+                <aside>
+                    Escrito por Junot Augusto.
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Junot Augusto</p>
+    </footer>
+    <div id="bola"></div>
+    <div id="bola"></div>
+    <div id="bola"></div>
+    <div id="bola"></div>
+    <div id="bola"></div>
+    <div id="bola"></div>
+    <div id="bola"></div>
+    <div id="bola"></div>
+
+    
+</body>
+</html>
