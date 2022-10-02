@@ -244,7 +244,9 @@ div.video > iframe {
     height: 90%;
 }
 
-div::before
+div::before {
+    
+}
 
 /*SOBRE O VIDEO:
 Normalmente quando puxamos um video de uma plataforma, ele vem com as configurações da própria plataforma.
@@ -252,6 +254,4 @@ Normalmente quando puxamos um video de uma plataforma, ele vem com as configura�
 - Criou uma classe chamada 'video'. Na classe, fez as seguintes configurações:
     - Tirou 20px das margens laterais pra div colar no body.
     - Colocou a posição, dentro da div, como 'relative'.
-    - Colocou a posição, dentro do iframe que tava dentro da div com a posição 'absolute'.
-    - 
-*/
+    - Colocou a posição, dentro do iframe que tava dentro da div com a posição 'absolute'. */
