@@ -244,10 +244,6 @@ div.video > iframe {
     height: 90%;
 }
 
-div::before {
-    
-}
-
 /*SOBRE O VIDEO:
 Normalmente quando puxamos um video de uma plataforma, ele vem com as configurações da própria plataforma.
 - Envelopamos o video em uma div.
