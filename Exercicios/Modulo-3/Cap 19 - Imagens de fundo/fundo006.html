@@ -4,23 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo Fixo de Tela</title>
     <style>
         body {
             height: 100vh;
+            /*
             background-color: black;
             background-image: url("../imagens/wallpaper002.jpg");
             background-position: center top;
             background-repeat: no-repeat;
             background-size: cover; 
+            background-attachment: fixed;
+            */
+
+            /*Shorthand do background:
+                color - image - position - repeat - size - attachment
+                Porém, os navegadores não estão, por enquanto, aceitando o size cover quando aplicado no shorthand. Pra funcionar o shorthand com o size, o size deve ser aplicado separadamente, conforme abaixo. Vale ressaltar, entretanto que o size encontra-se entre o repeat e o attachment no manual do W3C, porém, não está funcionando na maioria dos navegadores.
+            */
+            background: black url("../imagens/wallpaper002.jpg") center center no-repeat fixed;
+            background-size: cover;
             
+            /*Por padrão, o attachment é scroll, ou seja, a imagem vai rolar com o conteúdo. Se colocarmos fixed, ela fica fixa no fundo da tela. Combinando o COVER com o FIXED, o usuário pode mexer no tamanho da tela que ela acompanha o movimento do usuário. Faça o teste.*/
+
             /*Por padrão, o background size é auto. Se colocar 100% 100%, ele ocupa a tela toda mas a imagem estica conforme o usuário aumenta ou diminui a tela.*/
+
             /*A propriedade contain deixa a imagem 100% exibida, ou seja, se diminuir a tela, ela diminui também. */
             /*Não exibe 100% da imagem dependendo do tamanho da tela, mas ocupa 100% da viewport.*/
         }
         main {
             background-color: white;
-            width: 400px;
+            max-width: 550px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
@@ -28,6 +41,7 @@
             text-align: justify;
             line-height: 1.2;
             font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
         }
 
         main > h1 {
@@ -41,7 +55,10 @@
     <main>
         <h1>Teste de imagem de fundo</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cumque fuga doloribus exercitationem tempora modi, in consectetur nemo soluta, incidunt amet minima iure eligendi cum placeat nisi eum sapiente. Quia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus corrupti accusantium ex totam soluta. Libero facere voluptate assumenda asperiores illum eaque culpa, fuga, enim quisquam unde maxime numquam excepturi eum!</p>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium consequuntur, eveniet, quas libero debitis facilis quo reiciendis assumenda optio facere praesentium accusantium eos. Minima quis blanditiis error quae, dolore fugit! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde aspernatur incidunt aliquam facilis consequatur aut doloremque dolor repellat saepe, sint illo recusandae porro debitis necessitatibus tempora delectus iste quia vero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. A reiciendis accusantium sint excepturi eius sed eaque architecto hic perspiciatis cumque! Nam quidem sequi dolor tenetur, rerum ad dicta perferendis voluptas.</p>
        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas enim quis, ratione perspiciatis repellat deserunt totam. Deleniti laborum optio nesciunt, nulla asperiores ratione temporibus corporis deserunt qui fugiat ullam debitis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, vero quasi placeat expedita voluptatibus doloribus iure, culpa possimus tempore quisquam quaerat? Assumenda natus rerum sint non cum officiis repellendus atque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam sit laboriosam magni aliquid. Sed saepe quae, perspiciatis eius consequuntur quidem quam id, at harum, sapiente facilis architecto a aliquam iure!</p>
     </main>
 </body>
 </html>
