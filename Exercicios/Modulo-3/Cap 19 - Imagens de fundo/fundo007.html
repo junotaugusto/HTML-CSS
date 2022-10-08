@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento Vertical</title>
+    <style>
+        #container {
+            background-image: url("..//imagens/target001.png");
+            background-size: 100% 100%;
+            position: relative;
+            height: 90vh;
+            background-color: purple;
+            padding: 10px;
+        }
+
+        #conteudo {
+            background-image: url("..//imagens/target001.png");
+            background-size: 100% 100%;
+            position: absolute;
+            height: 300px;
+            width: 500px;
+            background-color: rgb(255, 255, 0);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            border-radius: 15px;
+            border: 1px solid red;
+        }
+        /* margin: auto; Centraliza o conteúdo horizontalmente. Não verticalmente.
+
+        Para centralizar horizontalmente, a primeira coisa é deixar o container com a posição relativa. Todo posicionamento de um box, em html, por padrão, ja é relativo.
+
+        Já o conteúdo precisa de um posicionamento absoluto. A regra é, o que está de fora, o que está contendo o conteúdo, o container, tem o posicionamento relativo e o conteúdo tem o posicionamento absoluto.
+
+        Quando colocamos o posicionamento absoluto em um conteúdo, podemos configurar duas propriedades. O left e o top. Mas, ao invés de colocar valores em pixels para encontrar o centro da caixa, podemos trabalhar com porcentagem. 
+
+        Porém, ele fica fixo no canto superior esquerdo do viewport. Para colocar o alvo no meio da tela, é preciso fazer uma transformação. Essa transformação é mexer em qualquer caixa aplicando uma alteração de transformação nela. Existem várias propriedades na transformação como aumentar ou diminuir com scale(), mexer na perspectiva, rodar o conteúdo, porém, pra centralizar, utilize a operação translate() e aplique -50% para ele recuar à esquerda 50% e -50% para ele subir 50%, ficando exatamente no meio da tela.
+
+        Lembrando que o left e o top são importantes para jogar a imagem no canto superior esquerdo do CENTRO da tela. E só funciona se a posição for absoluta.
+        */
+    </style>
+</head>
+<body>
+    <!--
+        Quando vamos centralizar verticalmente, é preciso ter um container e um conteúdo. As tags section e article servem como duas divs semânticas.
+    -->
+    <section id="container">
+        <h1> TÍTULO </h1>
+        <article id="conteudo">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi vitae, culpa aliquam voluptatem rerum voluptate quisquam excepturi delectus inventore tenetur adipisci at labore voluptas assumenda vero pariatur ea molestias nisi.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quidem voluptatem molestias atque, asperiores nisi nesciunt nemo nulla mollitia facilis in inventore necessitatibus doloribus rerum temporibus eveniet, ut velit. Dicta!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis illo eveniet sunt distinctio minus magnam odit, et, aspernatur doloribus quas molestiae veritatis quibusdam consequatur exercitationem aut fugit ad. Quia, similique.</p>
+        </article>
+    </section>
+</body>
+</html>
