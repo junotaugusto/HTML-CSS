@@ -17,7 +17,7 @@
     background-image: url('imagens/background001.jpg');
     background-attachment: fixed;
     background-size: cover;
-    background-position: center center;
+    background-position: right center;
     background-repeat: no-repeat;
     background-color: transparent;
 }
@@ -26,7 +26,7 @@
     background-image: url('imagens/background002.jpg');
     background-attachment: fixed;
     background-size: cover;
-    background-position: center center;
+    background-position: right center;
     background-repeat: no-repeat;
     background-color: transparent;
 }
@@ -90,6 +90,7 @@ section.imagem {
     background-color: rgb(255, 211, 128);
     color: white;
     text-shadow: 3px 1px 6px rgb(0 0 0 / 66%) ;
+    box-shadow: inset 6px 6px 13px 0px rgb(99, 99, 99);
 }
 
 section.imagem > p {
@@ -97,6 +98,11 @@ section.imagem > p {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.253);
     text-shadow: 3px 1px 6px rgba(0, 0, 0, 0.663);
+}
+
+section > p{
+
+    padding-bottom: 1.5em;
 }
 
 footer {
