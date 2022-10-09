@@ -13,6 +13,24 @@
     padding: 0px;
 }
 
+#imagem1 {
+    background-image: url('imagens/background001.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+#imagem2 {
+    background-image: url('imagens/background002.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
 html, body {
     min-height: 100vh; /*Tamanho mínimo da página vai ser 100% da viewport height*/
     background-color: darkgrey;
@@ -69,13 +87,9 @@ section.normal {
 }
 
 section.imagem {
+    background-color: rgb(255, 211, 128);
     color: white;
-    background-image: url('imagens/background001.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: transparent;
+    text-shadow: 3px 1px 6px rgb(0 0 0 / 66%) ;
 }
 
 section.imagem > p {
