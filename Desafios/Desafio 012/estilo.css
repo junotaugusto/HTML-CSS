@@ -1,14 +1,22 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Passion+One&display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif; /*Fonte padrão para links*/
+    --fonte2: 'Passion One', cursive; /*Títulos*/
+    --fonte3: 'Lavishly Yours', cursive; /*Conteúdo das seções*/
+}
+
 * {
     margin: 0px;
     padding: 0px;
 }
 
 html, body {
-
     min-height: 100vh; /*Tamanho mínimo da página vai ser 100% da viewport height*/
     background-color: darkgrey;
+    font-family: var(--fonte1);
 }
 
 header {
@@ -20,6 +28,8 @@ header {
 header > h1 {
     padding-top: 50px;
     font-variant: small-caps;
+    font-family: var(--fonte2);
+    font-size: 7vw; /*O tamanho da letra é aplicado conforme o a largura da tela*/
 }
 
 header > p {
@@ -48,6 +58,8 @@ section {
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 25px;
+    font-family: var(--fonte3);
+    font-size: 4vw; /*O tamanho da letra é aplicado conforme o a largura da tela*/
 }
 
 section.normal {
@@ -56,14 +68,15 @@ section.normal {
 }
 
 section.imagem {
-    background-color: orange;
+    background-color: rgb(255, 211, 128);
     color: white;
 }
 
 section.imagem > p {
-
+    display: inline-block; /*Transforma na caixa que se adapta ao conteúdo*/
+    padding: 10px;
     background-color: rgba(0, 0, 0, 0.253);
-    width: 400px;
+    text-shadow: 3px 1px 6px rgba(0, 0, 0, 0.663);
 }
 
 footer {
