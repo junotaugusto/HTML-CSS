@@ -20,9 +20,10 @@ html, body {
 }
 
 header {
-    background-color: black;
+    background-image: linear-gradient(to right, black, white);
     color: white;
     text-align: center;
+    text-shadow: 4px 3px 10px rgba(0, 0, 0, 0.536);
 }
 
 header > h1 {
@@ -63,13 +64,18 @@ section {
 }
 
 section.normal {
-    background-color: white;
+    background-color: rgb(255, 250, 201);
     color: black;
 }
 
 section.imagem {
-    background-color: rgb(255, 211, 128);
     color: white;
+    background-image: url('imagens/background001.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
 }
 
 section.imagem > p {
