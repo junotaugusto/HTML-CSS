@@ -1,0 +1,109 @@
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela 1</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        :root {
+            --azul: rgb(0, 0, 52);
+            --branco: white;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            margin: 20px;
+        }
+
+        table {
+            margin: 40px;
+            width: 40vw;
+            height: 25vh;
+            border-collapse: collapse;
+            color: orange;
+            outline: 4px solid rgb(55, 6, 6); 
+            border-radius: 10px;
+        }
+
+        tr.linha {
+            background-color: lightgrey;
+            color: white;
+        }
+
+        td {
+            border: 3px solid rgb(150, 88, 88);
+            padding: 5px;
+            color: black;
+            text-align: center; /*Alinhamento horizontal*/ 
+            vertical-align: middle; /*Alinhamento vertical - top, middle e bottom.*/
+            background-color: var(--azul);
+            color: var(--branco);
+        }
+
+        p {
+            font-size: 20px;
+            margin: 20px;
+            font-style: italic;
+        }
+        
+        .meio {
+            vertical-align: var(--meio);
+        }
+
+        
+    </style>
+ </head>
+ <body>
+    <h1>Minha Primeira Tabela</h1>
+    <table>
+        <!--As tabelas mais simples possuem a seguinte hierarquia:
+        Table
+            Table Rows
+                Table Header
+                Table Data -->
+        <tr>
+            <td>
+                Dado 1
+            </td>
+            <td>
+                Dado 2
+            </td>
+            <td>
+                Dado 3
+            </td>
+        </tr>
+        <tr class="linha">
+            <td>
+                Dado 1
+            </td>
+            <td>
+                Dado 2
+            </td>
+            <td>
+                Dado 3
+            </td>
+        </tr>
+        <tr>
+            <td class="meio">
+                Dado 1
+            </td>
+            <td>
+                Dado 2
+            </td>
+            <td>
+                Dado 3
+            </td>
+        </tr>
+    </table>
+    <p>O fechamento das tags &lt;td&gt; e &lt;tr&gt; não são mais obrigatórios. Se a hierarquia não for obedecida, os dados vão aparecer antes ou depois da tabela.</p>
+ </body>
+ </html>
