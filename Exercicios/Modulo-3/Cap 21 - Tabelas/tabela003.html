@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesclagem de Células</title>
+    <style>
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: separate; /*Se puser esse atributo de colapsar, o border-radius não funciona*/
+
+        }
+
+        td {
+            border: 4px solid;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 15vw;
+            height: 20vh;
+            background-color: cyan;
+        }
+
+        .cabecalho {
+            width: 75vw;
+            height: 20vh;
+            background-image: linear-gradient(to right, cyan, grey);
+        }
+
+        .coluna1 {
+            width: 15vw;
+            height: 85vh;
+            background-color: lightcyan;
+        }
+
+        .propaganda {
+            width: 15vw;
+            height: 85vh;
+            background-color: lightcyan;
+        }
+
+        .coluna2 {
+            width: 15vw;
+            height: 85vh;
+            background-color: darkgrey;
+        }
+
+
+        .rodape {
+            background-color: black;
+            color: white;
+        }
+
+        div {
+            background-color: rgb(193, 193, 255);
+            padding: 10px;
+            margin: 20px;
+            margin-top: 0px;
+            height: 150px;
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        thead {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mesclagem de Células</h1>
+    <table>
+        <tr>
+            <td colspan="3">B</td> <!--Expansão de duas colunas-->
+        </tr>
+        <tr>
+            <td rowspan="3">D</td> <!--Expansão de três linhas-->
+            <td>E</td>
+            <td rowspan="2">F</td>
+        </tr>
+        <tr>
+            <td>H</td>
+        </tr>
+        <tr>
+            <td colspan="2">K</td>
+        </tr>
+    </table>
+    <h2>Testando um modelo de um Site</h2>
+    <table>
+        <th>
+            <tr>
+                <td class="logo">Logo do Site</td>
+                <td class="cabecalho" colspan="3">Cabeçalho do Site</td>
+            </tr>
+        </th>
+        <tbody>
+            <tr>
+                <td rowspan="3">Links do Site</td>
+                <td colspan="2">Títulos</td>
+                <td class="propaganda" rowspan="3">Propaganda</td>
+            </tr>
+            <tr>
+                <td>Conteúdo 1</td>
+
+                <td>Conteúdo 2</td>
+            </tr>
+            <tr>
+                <td colspan="2">Conteúdo 4</td>
+            </tr>
+            <tr>
+                <td colspan="4">rodapé</td>
+            </tr>
+          
+        </tbody>
+    
+    </table>
+    <h2>Desafio 1 - Aula 9</h2>
+    <table style="width: 500px; border-collapse: separate;">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="2">3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td colspan="3">8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td rowspan="2">10</td>
+            <td colspan="2">11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+        </tr>
+    </table>
+    <h2>Desafio 2 - Aula 9</h2>
+    <table style="width: 500px; border-collapse: separate;">
+        <tr>
+            <td colspan="4">A</td>
+            <td rowspan="4">B</td>
+        </tr>
+        <tr>
+            <td rowspan="4">C</td>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+        </tr>
+        <tr>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+        </tr>
+        <tr>
+            <td>J</td>
+            <td>L</td>
+            <td>M</td>
+        </tr>
+        <tr>
+            <td colspan="4">N</td>
+        </tr>
+    </table>
+    <h2>Desafio 3 - Aula 10</h2>
+    <table>
+        <thead>
+            <th>
+                <tr>
+                    <td>Campeonato</td>
+                    <td>Times</td>
+                    <td colspan="3">Títulos</td>
+                </tr>
+            </th>
+            <tbody>
+                <tr>
+                    <td rowspan="3"><strong>Série B</strong></td>
+                    <td>Palmeiras</td>
+                    <td>Libertadores 2020</td>
+                    <td>Libertadores 2021</td>
+                    <td>Brasileiro 2022</td>
+                </tr>
+                <tr>    
+                    <td>Santos</td>
+                    <td>Paulista 2015</td>
+                    <td>Brasileiro 2002</td>
+                    <td>Libertadores 2011</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td>Paulista 2021</td>
+                    <td>Sulamericana 2012</td>
+                    <td>Libertadores 2005</td>
+                </tr>
+                <tr>
+                    <td rowspan="3"><strong>Série B</strong></td>
+                    <td>Vasco</td>
+                    <td>Libertadores 1997</td>
+                    <td>Brasileiro 1997</td>
+                    <td>Copa do Brasil 2011</td>
+                </tr>
+                <tr>    
+                    <td>Cruzeiro</td>
+                    <td>Libertadores 1998</td>
+                    <td>Brasileiro 2014</td>
+                    <td>Brasileiro 2003</td>
+                </tr>
+                <tr>
+                    <td>Grêmio</td>
+                    <td>Gaúcho 2022</td>
+                    <td>Copa do Brasil 1999</td>
+                    <td>Libertadores 2017</td>
+                </tr>
+
+            </tbody>
+        </thead>
+    </table>
+</body>
+</html>
