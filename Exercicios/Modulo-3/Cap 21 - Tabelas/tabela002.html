@@ -19,6 +19,7 @@
             margin: 30px;
             width: 500px;
             border-collapse: collapse;
+            position: relative; /*Para fixar o cabeçalho*/
 
         }
 
@@ -26,11 +27,19 @@
             border: 4px solid green;
             text-align: center;
             padding: 10px;
+            font-weight: bold;
+            color: rgb(2, 62, 2);
         } 
 
         thead, tfoot {
             background-color: aquamarine;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky; /*Colado no topo da tabela */
+            top: 0; /*Vai colar na "parte 0"*/
+            background-color: aquamarine;
         }
 
         caption {
@@ -41,7 +50,7 @@
         }
 
         tbody > tr:nth-child(2n) { /*Efeito zebrado de duas em duas linhas*/
-            background-color: grey;
+            background-color: rgb(177, 177, 177);
 
         }
     </style>
@@ -112,37 +121,146 @@
                 <th scope="col">
                     Sabor
                 </th>
+                <th>Unidade</th>
                 <th scope="col" style="width: 100px;">Preço</th>
+            
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>Tradicional</td>
-                <td>R$120,00</td>
+                <td>1</td>
+                <td>R$7,50</td>
             </tr>
             <tr>
-                <td>Coco</td>
-                <td>R$120,00</td>
+                <td>Tradicional</td>
+                <td>2</td>
+                <td>R$14,00</td>
+            </tr>
+            <tr>
+                <td>Tradicional</td>
+                <td>3</td>
+                <td>R$18,00</td>
             </tr>
             <tr>
                 <td>Leite Ninho</td>
-                <td>R$120,00</td>
+                <td>1</td>
+                <td>R$7,50</td>
             </tr>
             <tr>
-                <td>Limão Siciliano</td>
-                <td>R$170,00</td>
+                <td>Leite Ninho</td>
+                <td>2</td>
+                <td>R$14,00</td>
             </tr>
             <tr>
-                <td>Paçoca</td>
-                <td>R$170,00</td>
+                <td>Leite Ninho</td>
+                <td>3</td>
+                <td>R$18,00</td>
             </tr>
             <tr>
                 <td>Doce de Leite</td>
-                <td>R$170,00</td>
+                <td>1</td>
+                <td>R$8,50</td>
             </tr>
             <tr>
-                <td>Baunilha</td>
-                <td>R$120,00</td>
+                <td>Doce de Leite</td>
+                <td>2</td>
+                <td>R$16</td>
+            </tr>
+            <tr>
+                <td>Doce de Leite</td>
+                <td>3</td>
+                <td>R$22,00</td>
+            </tr>
+            <tr>
+                <td>Tradicional</td>
+                <td>1</td>
+                <td>R$7,50</td>
+            </tr>
+            <tr>
+                <td>Tradicional</td>
+                <td>2</td>
+                <td>R$14,00</td>
+            </tr>
+            <tr>
+                <td>Tradicional</td>
+                <td>3</td>
+                <td>R$18,00</td>
+            </tr>
+            <tr>
+                <td>Leite Ninho</td>
+                <td>1</td>
+                <td>R$7,50</td>
+            </tr>
+            <tr>
+                <td>Leite Ninho</td>
+                <td>2</td>
+                <td>R$14,00</td>
+            </tr>
+            <tr>
+                <td>Leite Ninho</td>
+                <td>3</td>
+                <td>R$18,00</td>
+            </tr>
+            <tr>
+                <td>Doce de Leite</td>
+                <td>1</td>
+                <td>R$8,50</td>
+            </tr>
+            <tr>
+                <td>Doce de Leite</td>
+                <td>2</td>
+                <td>R$16</td>
+            </tr>
+            <tr>
+                <td>Doce de Leite</td>
+                <td>3</td>
+                <td>R$22,00</td>
+            </tr>
+            <tr>
+                <td>Tradicional</td>
+                <td>1</td>
+                <td>R$7,50</td>
+            </tr>
+            <tr>
+                <td>Tradicional</td>
+                <td>2</td>
+                <td>R$14,00</td>
+            </tr>
+            <tr>
+                <td>Tradicional</td>
+                <td>3</td>
+                <td>R$18,00</td>
+            </tr>
+            <tr>
+                <td>Leite Ninho</td>
+                <td>1</td>
+                <td>R$7,50</td>
+            </tr>
+            <tr>
+                <td>Leite Ninho</td>
+                <td>2</td>
+                <td>R$14,00</td>
+            </tr>
+            <tr>
+                <td>Leite Ninho</td>
+                <td>3</td>
+                <td>R$18,00</td>
+            </tr>
+            <tr>
+                <td>Doce de Leite</td>
+                <td>1</td>
+                <td>R$8,50</td>
+            </tr>
+            <tr>
+                <td>Doce de Leite</td>
+                <td>2</td>
+                <td>R$16</td>
+            </tr>
+            <tr>
+                <td>Doce de Leite</td>
+                <td>3</td>
+                <td>R$22,00</td>
             </tr>
         </tbody>
         <tfoot>
