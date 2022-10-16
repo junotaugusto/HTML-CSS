@@ -16,10 +16,20 @@
 
         }
 
-        td {
+        th, td {
             border: 4px solid;
             padding: 8px;
             text-align: center;
+        }
+
+        .cinza {
+            background-color: lightgrey;
+        }
+
+        caption {
+            padding: 10px;
+            font-weight:bold;
+            font-size: 1.3em;
         }
 
         .logo {
@@ -179,55 +189,115 @@
     <h2>Desafio 3 - Aula 10</h2>
     <table>
         <thead>
-            <th>
-                <tr>
-                    <td>Campeonato</td>
-                    <td>Times</td>
-                    <td colspan="3">Títulos</td>
-                </tr>
-            </th>
-            <tbody>
-                <tr>
-                    <td rowspan="3"><strong>Série B</strong></td>
-                    <td>Palmeiras</td>
-                    <td>Libertadores 2020</td>
-                    <td>Libertadores 2021</td>
-                    <td>Brasileiro 2022</td>
-                </tr>
-                <tr>    
-                    <td>Santos</td>
-                    <td>Paulista 2015</td>
-                    <td>Brasileiro 2002</td>
-                    <td>Libertadores 2011</td>
-                </tr>
-                <tr>
-                    <td>São Paulo</td>
-                    <td>Paulista 2021</td>
-                    <td>Sulamericana 2012</td>
-                    <td>Libertadores 2005</td>
-                </tr>
-                <tr>
-                    <td rowspan="3"><strong>Série B</strong></td>
-                    <td>Vasco</td>
-                    <td>Libertadores 1997</td>
-                    <td>Brasileiro 1997</td>
-                    <td>Copa do Brasil 2011</td>
-                </tr>
-                <tr>    
-                    <td>Cruzeiro</td>
-                    <td>Libertadores 1998</td>
-                    <td>Brasileiro 2014</td>
-                    <td>Brasileiro 2003</td>
-                </tr>
-                <tr>
-                    <td>Grêmio</td>
-                    <td>Gaúcho 2022</td>
-                    <td>Copa do Brasil 1999</td>
-                    <td>Libertadores 2017</td>
-                </tr>
-
-            </tbody>
+            <th scope="col">Grupo</th>
+            <th scope="col">Times</th>
+            <th colspan="3" scope="colgroup">Títulos</th>
         </thead>
+        <tbody>
+            <caption>Títulos dos Times</caption>
+            <tr>
+                <th rowspan="3" scope="rowgroup">Série A</th>
+                <td>Palmeiras</td>
+                <td>Libertadores 2020</td>
+                <td>Libertadores 2021</td>
+                <td>Brasileiro 2022</td>
+            </tr>
+            <tr>    
+                <td>Santos</td>
+                <td>Paulista 2015</td>
+                <td>Brasileiro 2002</td>
+                <td>Libertadores 2011</td>
+            </tr>
+             <tr>
+                <td>São Paulo</td>
+                <td>Paulista 2021</td>
+                <td>Sulamericana 2012</td>
+                <td>Libertadores 2005</td>
+            </tr>
+            <tr>
+                <th rowspan="3" scope="rowgroup">Série B</th>
+                <td>Vasco</td>
+                <td>Libertadores 1997</td>
+                <td>Brasileiro 1997</td>
+                <td>Copa do Brasil 2011</td>
+            </tr>
+            <tr>    
+                <td>Cruzeiro</td>
+                <td>Libertadores 1998</td>
+                <td>Brasileiro 2014</td>
+                <td>Brasileiro 2003</td>
+            </tr>
+            <tr>
+                <td>Grêmio</td>
+                <td>Gaúcho 2022</td>
+                <td>Copa do Brasil 1999</td>
+                <td>Libertadores 2017</td>
+            </tr>
+        </tbody>
     </table>
+    <h2>Desafio 4 - Aula 12</h2>
+    <table style="width: 700px; border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th scope="col" class="cinza" rowspan="2">Área</th>
+                <th scope="col" class="cinza" colspan="2" rowspan="2">Disciplinas</th>
+                <th scope="colgroup" class="cinza" colspan="2">Notas</th>
+                <th scope="col" class="cinza" rowspan="2">Média</th>
+            </tr>
+            <tr>
+                <th scope="col" class="cinza">Nota 1</th>
+                <th scope="col" class="cinza">Nota 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="rowgroup" class="cinza" rowspan="4">Exatas</th>
+                <td colspan="2">Matemática</td>
+                <td>5.0</td>
+                <td>5.0</td>
+                <td>5.0</td>
+            </tr>
+            <tr>
+                <td colspan="2">Física</td>
+                <td>9.0</td>
+                <td>7.0</td>
+                <td>8.0</td>
+            </tr>
+            <tr>
+                <td colspan="2">Química</td>
+                <td>7.0</td>
+                <td>6.0</td>
+                <td>6.5</td>
+            </tr>
+            <tr>
+                <td colspan="2">Biologia</td>
+                    <td>8.0</td>
+                    <td>4.0</td>
+                    <td>6.0</td>
+            </tr>
+            <tr>
+                <th scope="row" class="cinza" colspan="5">Média de Exatas</th>
+                <th scope="row" class="cinza">6.2</th>
+            </tr>
+            <tr>
+                <th scope="rowgroup" class="cinza" rowspan="2">Humanas</th>
+                <td colspan="2">História</td>
+                <td>8.0</td>
+                <td>4.0</td>
+                <td>6.0</td>
+            </tr>
+            <tr>
+                <td colspan="2">Geografia</td>
+                <td>9.0</td>
+                <td>7.0</td>
+                <td>8.0</td>
+            </tr>
+            <tr>
+                <th scope="row" class="cinza" colspan="5">Média de Humanas</th>
+                <th scope="row" class="cinza">7.0</th>
+            </tr>
+        </tbody>
+    </table>
+    
 </body>
 </html>
