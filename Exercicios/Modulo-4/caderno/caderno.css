@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(15, 137, 198);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    text-align: center;
+    color: white;
+}
+
+h2, h3 {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.8em;
+    padding: 5px;
+}
+
+main {
+    width: 65%;
+    height: 97%;
+    background-color: white;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.515);
+    overflow: auto;
+
+}
+
+p {
+    font-size: 1.5em;
+    padding: 15px;
+    text-align: justify;
+    border: 1px solid black;
+    margin: 10px;
+    border-radius: 10px 0px 10px 0px;
+}
